@@ -10,7 +10,8 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { TrainingComponent } from './training/training.component';
 import { CurrentTrainingsComponent } from './training/current-trainings/current-trainings.component';
 import { NewTrainingsComponent } from './training/new-trainings/new-trainings.component';
-import { PastTrainingsComponent } from './training/past-trainings/past-trainings.component'
+import { PastTrainingsComponent } from './training/past-trainings/past-trainings.component';
+import { WelcomeComponent } from './welcome/welcome.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PastTrainingsComponent } from './training/past-trainings/past-trainings
     TrainingComponent,
     CurrentTrainingsComponent,
     NewTrainingsComponent,
-    PastTrainingsComponent
+    PastTrainingsComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
