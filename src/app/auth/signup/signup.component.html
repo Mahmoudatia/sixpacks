@@ -14,7 +14,7 @@
         name="email"
         email
         required
-        placeholder="please enter you email"
+        placeholder="your email"
         #emailInput="ngModel"
       />
       <mat-error *ngIf="emailInput.hasError('required')"
@@ -41,8 +41,11 @@
     <mat-form-field>
       <input
         matInput
-        placeholder="Select you birthDay"
+        placeholder="birthday"
         [matDatepicker]="picker"
+        ngModel
+        name="birthdate"
+        [max]="maxDate"
       />
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>

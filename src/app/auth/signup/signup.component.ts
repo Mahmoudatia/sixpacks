@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
+  maxDate: any;
   constructor() { }
 
   ngOnInit(): void {
+    this.maxDate = new Date();
+    this.maxDate.setFullYear(this.maxDate.getFullYear() - 18);
   }
 
-  submit(form: FormsModule) {
-    console.log(form);
+  submit(form: NgForm) {
+    console.log(form.value);
   }
 }
