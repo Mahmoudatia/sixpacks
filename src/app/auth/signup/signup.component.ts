@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,4 +13,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  submit(form: FormsModule) {
+    console.log(form);
+  }
 }
