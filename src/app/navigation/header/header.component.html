@@ -1,0 +1,24 @@
+<main>
+  <div class="header-actions">
+    <button (click)="ToggleSide()" mat-icon-button fxHide.gt-xs>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <a routerLink="/">
+      <span>LOGO</span>
+    </a>
+  </div>
+  <div class="navigation-links" fxHide.xs>
+    <a routerLink="/login">
+      <span>Login</span>
+    </a>
+    <a routerLink="/signup">
+      <span>Signup</span>
+    </a>
+    <a routerLink="/training">
+      <span>Training</span>
+    </a>
+    <a>
+      <span>Logout</span>
+    </a>
+  </div>
+</main>

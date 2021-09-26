@@ -1,46 +1,13 @@
 <mat-sidenav-container>
   <!-- SideNav -->
-  <mat-sidenav #sidenav role="sideNave">
-    <mat-nav-list class="side-links">
-      <a mat-list-item routerLink="/signup">
-        <mat-icon>face</mat-icon>
-        <span>Signup</span>
-      </a>
-      <a mat-list-item routerLink="/login">
-        <mat-icon>input</mat-icon>
-        <span>Login</span>
-      </a>
-      <a mat-list-item routerLink="/training">
-        <mat-icon>fitness_center</mat-icon>
-        <span>Training</span>
-      </a>
-    </mat-nav-list>
+  <mat-sidenav #sidenav role="sideNave" open>
+    <app-sidenav-list (closeNav)="sidenav.close()"></app-sidenav-list>
   </mat-sidenav>
 
   <!-- SideNav content -->
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <main>
-        <div>
-          <button (click)="sidenav.toggle()" mat-icon-button fxHide.gt-xs>
-            <mat-icon>menu</mat-icon>
-          </button>
-          <a routerLink="/">
-            <span>LOGO</span>
-          </a>
-        </div>
-        <div class="navigation-links" fxHide.xs>
-          <a routerLink="/login">
-            <span>Login</span>
-          </a>
-          <a routerLink="/signup">
-            <span>Signup</span>
-          </a>
-          <a routerLink="/training">
-            <span>Training</span>
-          </a>
-        </div>
-      </main>
+      <app-header (toggleSideNav)="sidenav.toggle()"></app-header>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

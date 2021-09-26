@@ -1,35 +1,11 @@
 .mat-drawer-container {
   height: 100%;
-}
 
-mat-sidenav {
-  width: 20%;
+  mat-sidenav {
+    width: 20%;
 
-  @media (max-width:1000px) {
-    width: 50%;
-  }
-}
-
-.side-links {
-  span {
-    margin-left: .5rem;
-  }
-}
-
-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-
-  .navigation-links {
-    a {
-      text-decoration: none;
-    }
-
-    span {
-      color: #fff;
-      margin: 0 .5rem;
+    @media (max-width:1000px) {
+      width: 50%;
     }
   }
 }

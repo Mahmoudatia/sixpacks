@@ -12,7 +12,9 @@ import { TrainingComponent } from './training/training.component';
 import { CurrentTrainingsComponent } from './training/current-trainings/current-trainings.component';
 import { NewTrainingsComponent } from './training/new-trainings/new-trainings.component';
 import { PastTrainingsComponent } from './training/past-trainings/past-trainings.component';
-import { WelcomeComponent } from './welcome/welcome.component'
+import { WelcomeComponent } from './welcome/welcome.component';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { WelcomeComponent } from './welcome/welcome.component'
     CurrentTrainingsComponent,
     NewTrainingsComponent,
     PastTrainingsComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    HeaderComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,33 @@
+::ng-deep app-header {
+  width: 100%;
+
+  .header-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .navigation-links {
+      a {
+        text-decoration: none;
+      }
+
+      span {
+        color: #fff;
+        margin: 0 .5rem;
+      }
+    }
+  }
+
+}
