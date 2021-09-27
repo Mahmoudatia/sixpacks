@@ -20,7 +20,7 @@ export class CurrentTrainingsComponent implements OnInit {
   startCount() {
     this.timer = setInterval(() => {
       this.progress = this.progress + 5
-      if (this.progress >= 10) {
+      if (this.progress >= 100) {
         clearInterval(this.timer)
       }
     }, 1000)
@@ -28,6 +28,14 @@ export class CurrentTrainingsComponent implements OnInit {
 
   stopCounter() {
     clearInterval(this.timer);
-    this.dialog.open(StopTrainingsComponent);
+    const dialogRef = this.dialog.open(StopTrainingsComponent, {
+      data: {
+        progress: this.progress
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+    })
   }
 }
