@@ -8,16 +8,16 @@
     </a>
   </div>
   <div class="navigation-links" fxHide.xs>
-    <a routerLink="/login">
+    <a routerLink="/login" *ngIf="!isAuth">
       <span>Login</span>
     </a>
-    <a routerLink="/signup">
+    <a routerLink="/signup" *ngIf="!isAuth">
       <span>Signup</span>
     </a>
-    <a routerLink="/training">
+    <a routerLink="/training" *ngIf="isAuth">
       <span>Training</span>
     </a>
-    <a>
+    <a *ngIf="isAuth">
       <span>Logout</span>
     </a>
   </div>
